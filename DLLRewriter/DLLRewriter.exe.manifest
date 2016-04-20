@@ -12,7 +12,7 @@
 		<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
 		<security>
 			<requestedPrivileges>
-        <requestedExecutionLevel level="highestAvailable"/>
+				<requestedExecutionLevel level="highestAvailable"/>
 			</requestedPrivileges>
 		</security>
 	</trustInfo>

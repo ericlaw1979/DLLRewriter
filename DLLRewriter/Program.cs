@@ -31,8 +31,8 @@ namespace DLLRewriter
                 Array.Sort(sCandidates, (x, y) =>
                     {
                         try {
-                            Version vx = new Version(Path.GetDirectoryName(x));
-                            Version vy = new Version(Path.GetDirectoryName(y));
+                            Version vx = new Version(Path.GetFileName(x));
+                            Version vy = new Version(Path.GetFileName(y));
                             return -vx.CompareTo(vy);
                         }
                         catch
