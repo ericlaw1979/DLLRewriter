@@ -97,7 +97,7 @@ namespace DLLRewriter
                     ofd.Dispose();
                     if (String.IsNullOrEmpty(sFilename))
                     {
-                        Console.WriteLine("Usage:\n\n\tbinscan.exe <path-to-chrome.dll>");
+                        Console.WriteLine("Usage:\n\n\tDLLRewriter.exe <path-to-chrome.dll>");
                         return 1;
                     }
                 }
@@ -203,15 +203,7 @@ namespace DLLRewriter
                     }
                     else
                     {
-                        try
-                        {
-                            File.WriteAllBytes(sFilename, arrFile);
-                            Console.WriteLine("Overwrote original with modified " + sFilename);
-                        }
-                        catch (Exception eeX)
-                        {
-                            Console.WriteLine("Failed to write modified file due to " + eeX.Message + "\nRun elevated, if you haven't already.");
-                        }
+                        RewriteFile(sFilename, arrFile);
                     }
                 }
                 else
@@ -229,5 +221,24 @@ namespace DLLRewriter
             }
         }
 
+        private static void RewriteFile(string sFilename, byte[] arrFile)
+        {
+            do
+            {
+                try
+                {
+                    File.WriteAllBytes(sFilename, arrFile);
+                    Console.WriteLine("Overwrote original with modified " + sFilename);
+                    return;
+                }
+                catch (Exception eeX)
+                {
+                    Console.WriteLine("Failed to write modified file due to " + eeX.Message + "\nClose Chrome or run elevated, if you haven't already.");
+                }
+
+                Console.Write("Retry? [R/N]");
+            }
+            while (Char.ToLower(Console.ReadKey().KeyChar) != 'n');
+        }
     }
 }
