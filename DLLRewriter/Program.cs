@@ -277,7 +277,7 @@ namespace DLLRewriter
                     Console.WriteLine("Failed to write modified file due to " + eeX.Message + "\nClose Chrome or run elevated, if you haven't already.");
                 }
 
-                Console.Write("Retry? [R/N]");
+                Console.WriteLine("\nRetry? [R/N]");
             }
             while (Char.ToLower(Console.ReadKey().KeyChar) != 'n');
         }

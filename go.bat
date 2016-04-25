@@ -1,2 +1,2 @@
-@c:\tools\signtool sign /d "Fiddler4 Web Debugger" /du "https://textslashplain.com/2016/04/16/stupid-hexedit-tricks/" /n "Eric Lawrence" /t http://timestamp.digicert.com /fd SHA1 .\DLLRewriter\bin\release\dllRewriter.exe
-@C:\tools\signtool sign /as /d "Fiddler4 Web Debugger" /du "https://textslashplain.com/2016/04/16/stupid-hexedit-tricks/" /n "Eric Lawrence" /tr http://timestamp.globalsign.com /td SHA256 /fd SHA256 .\DLLRewriter\bin\release\dllRewriter.exe
+@c:\tools\signtool sign /d "Chrome.dll Rewriter" /du "https://textslashplain.com/2016/04/16/stupid-hexedit-tricks/" /n "Eric Lawrence" /t http://timestamp.digicert.com /fd SHA1 .\DLLRewriter\bin\release\dllRewriter.exe
+@C:\tools\signtool sign /as /d "Chrome.dll Rewriter" /du "https://textslashplain.com/2016/04/16/stupid-hexedit-tricks/" /n "Eric Lawrence" /tr http://timestamp.globalsign.com /td SHA256 /fd SHA256 .\DLLRewriter\bin\release\dllRewriter.exe
